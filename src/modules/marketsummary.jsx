@@ -2,15 +2,13 @@ import React from 'react'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Chip from './Chip';
 import Card from './card';
-import {apicalls} from '../apicalls'
-console.log(apicalls());
+// import {apicalls} from '../apicalls'
+// console.log(apicalls());
 const Marketsummary = () => {
     return (
         <div className='container'>
             <div className='button-1'>
-                <h1 style={{
-                    fontSize: '5rem'
-                }}>
+                <h1>
                     Market Summary
                 </h1>
                 <ArrowForwardIcon style={{ fontSize: "2.5rem" }} />

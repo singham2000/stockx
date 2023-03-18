@@ -1,5 +1,6 @@
 import Marketsummary from './modules/marketsummary';
 import React from 'react';
+import Chart from './modules/chart';
 import './styles/style.scss';
 function App() {
   return (
@@ -26,11 +27,12 @@ function App() {
           </h1>
         </div>
         <div className='frame'>
-          <video class="video-fPkHA2Uc" src="https://static.tradingview.com/static/bundles/chart-big.5ddfd85030f4ba213936.mp4" muted="" autoplay="" playsinline="" loop=""></video>
+          <video className="video-fPkHA2Uc" src="https://static.tradingview.com/static/bundles/chart-big.5ddfd85030f4ba213936.mp4" muted="" autoplay="" playsinline="" loop=""></video>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#000000" fill-opacity="1" d="M0,64L40,90.7C80,117,160,171,240,170.7C320,171,400,117,480,112C560,107,640,149,720,160C800,171,880,149,960,170.7C1040,192,1120,256,1200,277.3C1280,299,1360,277,1400,266.7L1440,256L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
       <Marketsummary />
+      <Chart />
     </div>
 
   );
