@@ -19,7 +19,7 @@ const Card = (props) => {
                         {props.price} INR
                     </p>
                     <p style={props.status<0?colored:colorgreen}>
-                        {props.status}%
+                    {props.status>0?'+':true} {props.status}%
                     </p>
                 </div>
             </div>

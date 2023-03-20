@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import dataContext from '../Context/dataContext';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Chip from './Chip';
 import Card from './card';
-// import {apicalls} from '../apicalls'
-// console.log(apicalls());
+import Chart from './chart';
 const Marketsummary = () => {
+    // RELIANCE ,ITC, ADANIENT
+    const { data } = useContext(dataContext);
+    console.log("data", data)
     return (
         <div className='container'>
             <div className='button-1'>
@@ -15,16 +18,18 @@ const Marketsummary = () => {
             </div>
             <div className='flex-1'>
                 <Chip label="Indices" />
-                <Chip label="Stocks" />
+                <Chip label="Stocks" selection={true} />
                 <Chip label="Crypto" />
                 <Chip label="Forex" />
                 <Chip label="Futures" />
                 <Chip label="Bonds" />
             </div>
             <div className="flex-1">
-                <Card logo='50' name="Nifty" price="17043.30" status='-0.65'/>
-                <Card logo='BSE' name="Sensex" price="77843.30" status='5.65'/>
+                <Card logo='ITC' name={data["ITC"]?.NSECode} price={data["ITC"]?.TodayOpen} status={data["ITC"]?.dayChangePerc} />
+                <Card logo='REL' name={data["RELIANCE"]?.NSECode} price={data["RELIANCE"]?.TodayOpen} status={data["RELIANCE"]?.dayChangePerc} />
+                <Card logo='AD' name={data["ADANIENT"]?.NSECode} price={data["ADANIENT"]?.TodayOpen} status={data["ADANIENT"]?.dayChangePerc} />
             </div>
+            <Chart />
         </div>
     )
 }

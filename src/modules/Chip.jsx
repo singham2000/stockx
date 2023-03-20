@@ -2,7 +2,7 @@ import React from 'react'
 
 const Chip = (props) => {
     return (
-        <p className='chip'>
+        <p className={props.selection ? 'chip selected' : 'chip'}>
             {props.label}
         </p>
     )
