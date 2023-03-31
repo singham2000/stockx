@@ -61,7 +61,7 @@ const Charter = () => {
       await axios.get(url).then((res) => {
         let data = res.data.chart.result[0];
         const quote = data.indicators.quote[0];
-        console.log("quote", quote)
+        
         const prices = data.timestamp.map((timestamp, index) => ({
           x: new Date(timestamp * 1000),
           y: [quote.open[index], quote.high[index], quote.low[index], quote.close[index]].map(round)
@@ -73,7 +73,7 @@ const Charter = () => {
           }]
         )
         setLoading(false)
-        console.log("data", prices);
+       
       })
       timeout = setTimeout(getData, 1000);
     }

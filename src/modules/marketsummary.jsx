@@ -8,7 +8,6 @@ const Marketsummary = () => {
 
     // RELIANCE ,ITC, ADANIENT
     const { data, selection } = useContext(dataContext);
-    console.log("data", data)
     return (
         <div className='container'>
             <div className='button-1'>
