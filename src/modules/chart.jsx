@@ -15,7 +15,8 @@ const round = (number) => {
 
 const Charter = () => {
   const { selection } = useContext(dataContext);
-  const url = `https://api.allorigins.win/raw?url=https://query1.finance.yahoo.com/v8/finance/chart/${selection}.NS`;
+  console.log(selection);
+  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${selection}.NS`;
   const [loading, setLoading] = useState(true)
   const [series, setSeries] = useState([{
     data: []
@@ -82,7 +83,7 @@ const Charter = () => {
       clearTimeout(timeout);
     }
     // eslint-disable-next-line
-  }, [])
+  }, [selection])
   // eslint-disable-next-line
   return (
     <div
