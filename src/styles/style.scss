@@ -3,6 +3,12 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 body {
@@ -16,12 +22,44 @@ h1 {
     font-weight: 100;
 }
 
+
+
 #logo {
     font-family: 'Quicksand', sans-serif;
 }
 
+.text_black {
+    color: black;
+    font-size: 2.5rem;
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 15vh;
+}
+
 .bg-black {
     background-color: black;
+}
+
+.description {
+    font-size: larger;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 12vw;
+}
+
+.gradient_text {
+    font-size: 8rem;
+    font-weight: 100;
+
+
+    -webkit-text-fill-color: #0000;
+    background: linear-gradient(90deg, #2962ff, #2962ff 6.02%, #726fff 28.12%, #c883ff 41.15%, #ab4df8 54.69%, #d1007e 69.27%, #dc132b 90.9%, #dc132b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: fit-content;
+
 }
 
 nav {
@@ -79,6 +117,7 @@ nav {
 .head {
     display: flex;
     margin: 0 15%;
+    flex-direction: column;
 }
 
 #quote {
@@ -124,6 +163,24 @@ nav {
     // overflow: auto;
 }
 
+.grid {
+    // margin-top: 15px;
+    display: grid;
+    height: max-content;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 15vw;
+    // overflow: auto;
+}
+
+.timg {
+    display: flex;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin: 12px 12px;
+    align-items: center;
+}
+
 .card {
     display: flex;
     align-items: center;
@@ -132,8 +189,12 @@ nav {
     height: 50px;
     padding: 10px 20px;
     border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     margin: 5px;
+
+    &:hover {
+        box-shadow: -7px 16px 62px 13px rgba(16, 158, 240, 0.57);
+    }
 
     .avatar {
         background-color: #1e53e5;
@@ -144,6 +205,14 @@ nav {
         justify-content: center;
         align-items: center;
         color: white;
+    }
+}
+
+.sel {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    &:hover {
+        box-shadow: -7px 16px 62px 13px rgba(223, 9, 55, 0.57);
     }
 }
 
@@ -196,7 +265,13 @@ nav {
     }
 }
 
+// .apexcharts-toolbar {
+//     display: none !important;
+// }
 
+.apexcharts-annotations {
+    background-color: #d41ee5 !important;
+}
 
 
 
@@ -239,5 +314,24 @@ nav {
     .card {
         width: 100%;
         background-color: white;
+    }
+
+    .gradient_text {
+        font-size: 5rem;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 100;
+        line-height: 1;
+        -webkit-text-fill-color: #0000;
+        background: linear-gradient(90deg, #2962ff, #2962ff 6.02%, #726fff 28.12%, #c883ff 41.15%, #ab4df8 54.69%, #d1007e 69.27%, #dc132b 90.9%, #dc132b);
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: fit-content;
+
+    }
+
+    .description {
+        padding: 12px;
     }
 }
